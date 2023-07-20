@@ -1,0 +1,78 @@
+.header-container {
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #00A2E1;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container :nth-child(1) {
+    margin-right: 4px;
+    font-size: 24px;
+    color: white;
+}
+
+.logo-container :nth-child(2) {
+    text-decoration: none;
+}
+
+.logo-container :nth-child(2) h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+} 
+
+
+/* Other Links Styling */
+.other-links {
+    display: flex;
+}
+
+/* Shortlist Styling */
+.shortlist-container {
+    margin-right: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.shortlist-container :nth-child(1) {
+    font-size: 24px;
+    font-weight: 100;
+    color: white;
+    margin-right: 4px;
+}
+
+.shortlist-container :nth-child(2) {
+    text-decoration: none;
+}
+
+.shortlist-container :nth-child(2) p {
+    font-size: 16px;
+}
+
+
+/* Contact Us Styling */
+.contactus-container {
+    display: flex;
+    align-items: center;
+}
+
+.contactus-container :nth-child(1) {
+    font-size: 24px;
+    font-weight: 100;
+    color: white;
+    margin-right: 4px;
+}
+
+.contactus-container :nth-child(2) {
+    text-decoration: none;
+}
+
+.contactus-container :nth-child(2) p {
+    font-size: 16px;
+}

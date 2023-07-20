@@ -1,0 +1,41 @@
+.footer-container {
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.main-links {
+    width: 38%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-links :nth-child(1) {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+
+.main-links :nth-child(2) {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+
+.main-links :nth-child(3) {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+
+.other-info {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+}
+
+.other-info :nth-child(1) {
+    margin-right: 16px;
+}

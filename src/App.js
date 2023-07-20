@@ -1,13 +1,24 @@
 import React,{useState} from 'react';
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Homepage from './pages/Homepage/Homepage';
+
 
 function App() {
 
 
   return (
-    <div>
+    <BrowserRouter>
+      <Header />
 
-    </div>
+      <Routes>
+        <Route path='/' element={<Homepage />}/>
+      </Routes>
+      
+      <Footer />
+    </BrowserRouter>
   );
 }
 
