@@ -106,6 +106,7 @@
     border-radius: 12px;
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 
 /* Compare Section Styling */
@@ -156,3 +157,61 @@
     text-align: center;
 }
 
+/* Extra Info Styling */
+.extra-info-section {
+    padding: 64px 64px 0 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.extra-info-container {
+    margin-top: 40px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.extra-info {
+    display: flex;
+    margin-bottom: 40px;
+}
+.extra-info-icon {
+    font-size: 80px;
+    color: #3A5295;
+    margin-right: 24px;
+}
+
+.extra-info-heart {
+    font-size: 56px;
+    color: #3A5295;
+    margin-right: 24px;
+}
+
+.search-compare h4 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.search-compare p {
+    font-size: 20px;
+    color: #383838;
+}
+
+.extra-info-container button {
+    width: 40%;
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    background-color: #3A5295;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.extra-info-section aside {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

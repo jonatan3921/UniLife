@@ -1,0 +1,68 @@
+.contact-container {
+    background-color: #00A2E1;
+    color: white;
+    padding: 40px 96px;
+
+    display: flex;
+}
+
+/* Email Section Styling */
+.email-container {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30%;
+}
+
+.email-container h3 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.email-container p {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.email-container input {
+    width: 90%;
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    color: black;
+    font-size: 20px;
+}
+
+.email-container input::placeholder {
+    color: #CED3D8;
+    font-size: 20px;
+}
+
+/* Social Media Section Styling */
+.social-media-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-media-container h3 {
+    font-size: 36px;
+    font-weight: 500;
+}
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 28px;
+    margin-right: 16px;
+}
+
+.social a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
