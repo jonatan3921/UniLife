@@ -102,12 +102,13 @@
     width: 200px;
     height: 48px;
     background-color: #3A5295;
+    color: white;
     border: none;
     border-radius: 12px;
-    color: white;
     font-size: 20px;
     cursor: pointer;
 }
+
 
 /* Compare Section Styling */
 .compare-section {

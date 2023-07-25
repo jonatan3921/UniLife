@@ -10,6 +10,7 @@ import {IoReceiptOutline} from 'react-icons/io5'
 import {MdOutlineRealEstateAgent} from 'react-icons/md'
 import {AiOutlineHeart} from 'react-icons/ai'
 import personImg from '../../assets/person.png'
+import { Link } from 'react-router-dom';
 
 function Homepage() {
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ function Homepage() {
               ) 
             }
           </div>
-          <button className='all-cities-btn'>See All Cities</button>
+          <Link to={'/allcities'}><button className='all-cities-btn'>See All Cities</button></Link>
         </section>
         <aside className='compare-section'>
           <h3>Compare all inclusive student homes.</h3>

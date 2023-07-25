@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Homepage from './pages/Homepage/Homepage';
 import Contact from './components/Contact/Contact';
+import AllCities from './pages/AllCities/AllCities';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Homepage />}/>
+        <Route path='/allcities' element={<AllCities/>}/>
       </Routes>
       <Contact />
       <Footer />
