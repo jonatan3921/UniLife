@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Homepage from './pages/Homepage/Homepage';
 import Contact from './components/Contact/Contact';
 import AllCities from './pages/AllCities/AllCities';
+import CityDetails from './pages/CityDetails/CityDetails';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Homepage />}/>
         <Route path='/allcities' element={<AllCities/>}/>
+        <Route path='/citydetails/:cityId' element={<CityDetails/>}/>
       </Routes>
       <Contact />
       <Footer />

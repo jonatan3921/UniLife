@@ -28,7 +28,7 @@ function AllCities() {
             <h3>Search by city</h3>
             <div className='city-container'>
                 {
-                cities.map(item => <Link className='city'>{item?.name}</Link>)
+                cities.map(item => <Link to={`/citydetails/${item?._id}`} className='city'>{item?.name}</Link>)
                 }
             </div>
         </section>

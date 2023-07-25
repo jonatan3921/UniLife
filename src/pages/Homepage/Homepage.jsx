@@ -47,7 +47,7 @@ function Homepage() {
           <div className='cities-container'>
             {
               cities.slice(0, 9).map(item => 
-                  <CityCard key={item.id} city={item}/>
+                  <CityCard key={item._id} city={item}/>
               ) 
             }
           </div>
