@@ -32,6 +32,7 @@ function CityDetails() {
     },[]
   )
 
+
   return (
     <div className='citydetails-container'>
       <div className='cover-container'>
@@ -40,7 +41,7 @@ function CityDetails() {
         <Filter />
       </div>
       <section className='allproperties-section'>
-        <h3>6 homes in </h3>
+        <h3>6 homes in {cityInfo[0]?.name}</h3>
         <div className='allproperties-container'>
           {
             properties.map(item => <PropertyCard key={item._id} property={item} />)

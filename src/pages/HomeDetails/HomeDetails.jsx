@@ -13,7 +13,7 @@ import {AiOutlineCheck} from 'react-icons/ai'
 
 function HomeDetails() {
     const {homeId} = useParams()
-    const [home, setHome] = useState({})
+    const [home, setHome] = useState([])
 
      
 
@@ -22,10 +22,12 @@ function HomeDetails() {
             axios.get(`https://unilife-server.herokuapp.com/properties/${homeId}`)
             .then(res => {
                 setHome(res.data)
+                console.log(home)
             })
             .catch(err => console.log(err))
         }, []
     )
+
 
 
     const fullAddress = home?.address?.street + ", " + home?.address?.city + ", " + home?.address?.postcode;
@@ -35,6 +37,7 @@ function HomeDetails() {
     const price = home?.rent;
     const furnished = home?.furnished;
     const availability = home?.availability;
+
      
   return (
     <div className='homedetails-container'>
@@ -53,13 +56,14 @@ function HomeDetails() {
                 </div>
                 <div className='key-features-container'>
                     <h2>Key Features</h2>
-                    {
-                        home?.key_features.map(item => (
+                    {home?.key_features ?
+                        home?.key_features.map((item) => (
                             <p className='feature'>
                                 <AiOutlineCheck className='check-icon'/>
                                 {item}
                             </p>
                         ))
+                    : null
                     }
                 </div>
             </div>
@@ -109,7 +113,7 @@ function HomeDetails() {
                 <div className='bedrooms-prices-container'>
                     <h2>Bedroom Prices</h2>
                     <div className='bedrooms-prices'>
-                         <BedroomPrices key={home?._id} home={home}/>
+                        <BedroomPrices key={home?._id} home={home}/> 
                     </div>
                 </div>
             </div>

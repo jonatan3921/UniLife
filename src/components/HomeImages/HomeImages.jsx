@@ -1,14 +1,17 @@
-import React, {} from 'react'
+import React from 'react'
 import './HomeImages.css'
 
 function HomeImages({home}) {
-
-    const image1 = home?.images[0];
-    const image2 = home?.images[1];
-    const image3 = home?.images[2];
-    const image4 = home?.images[3];
-
-    
+  let image1;
+  let image2;
+  let image3;
+  let image4;
+  if (home?.images !== undefined) {
+    image1 = home?.images[0];
+    image2 = home?.images[1];
+    image3 = home?.images[2];
+    image4 = home?.images[3];
+  }
 
 
   return (
