@@ -18,17 +18,18 @@ function CityDetails() {
         setProperties(res.data.response)
       })
       .catch(err => console.log(err))
-    }
+    }, []
   )
 
   useEffect(
     () => {
       axios.get(`https://unilife-server.herokuapp.com/cities/${cityId}`)
       .then(res => {
+        console.log(res.data.data)
         setCityInfo(res.data.data);
       })
       .catch(err => console.log(err))
-    }
+    },[]
   )
 
   return (
@@ -39,7 +40,7 @@ function CityDetails() {
         <Filter />
       </div>
       <section className='allproperties-section'>
-        <h3>6 homes in Leeds</h3>
+        <h3>6 homes in </h3>
         <div className='allproperties-container'>
           {
             properties.map(item => <PropertyCard key={item._id} property={item} />)

@@ -20,7 +20,6 @@ function Homepage() {
     () => {
       axios.get(`https://unilife-server.herokuapp.com/cities`)
       .then(res => {
-        console.log(res.data.response)
         setCities(res.data.response);
       })
       .catch(err => console.log(err))

@@ -8,6 +8,8 @@ import HomeImages from '../../components/HomeImages/HomeImages';
 import {MdOutlineBed} from 'react-icons/md'
 import {MdOutlineBathtub} from 'react-icons/md'
 import {AiOutlineHeart} from 'react-icons/ai'
+import BedroomPrices from '../../components/BedroomPrices/BedroomPrices'
+import {AiOutlineCheck} from 'react-icons/ai'
 
 function HomeDetails() {
     const {homeId} = useParams()
@@ -22,16 +24,17 @@ function HomeDetails() {
                 setHome(res.data)
             })
             .catch(err => console.log(err))
-        }
+        }, []
     )
 
-    const fullAddress = home.address?.street + ", " + home.address?.city + ", " + home.address?.postcode;
-    const bedrooms = home.bedroom_count;
-    const bathrooms = home.bathroom_count;
-    const propertyType = home.property_type;
-    const price = home.rent;
-    const furnished = home.furnished;
-    const availability = home.availability;
+
+    const fullAddress = home?.address?.street + ", " + home?.address?.city + ", " + home?.address?.postcode;
+    const bedrooms = home?.bedroom_count;
+    const bathrooms = home?.bathroom_count;
+    const propertyType = home?.property_type;
+    const price = home?.rent;
+    const furnished = home?.furnished;
+    const availability = home?.availability;
      
   return (
     <div className='homedetails-container'>
@@ -42,9 +45,23 @@ function HomeDetails() {
         <div className='homedetails'>
             <div className='homedetails-description'>
                 <div className='home-images'>
-                    <HomeImages key={home._id} home={home}/>
+                    <HomeImages key={home?._id} home={home}/>
                 </div>
-
+                <div className='description-container'>
+                    <h2>Description</h2>
+                    <p>{home?.property_description}</p>
+                </div>
+                <div className='key-features-container'>
+                    <h2>Key Features</h2>
+                    {
+                        home?.key_features.map(item => (
+                            <p className='feature'>
+                                <AiOutlineCheck className='check-icon'/>
+                                {item}
+                            </p>
+                        ))
+                    }
+                </div>
             </div>
             <div className='home-info'>
                 <div className='main-home-info'>
@@ -88,6 +105,12 @@ function HomeDetails() {
                         Shortlist
                     </button>
                     <button className='booking-btn'>Book Viewing</button>
+                </div>
+                <div className='bedrooms-prices-container'>
+                    <h2>Bedroom Prices</h2>
+                    <div className='bedrooms-prices'>
+                         <BedroomPrices key={home?._id} home={home}/>
+                    </div>
                 </div>
             </div>
         </div>
