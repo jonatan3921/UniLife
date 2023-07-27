@@ -1,0 +1,179 @@
+.homedetails-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.return-link {
+    margin: 72px 0 0 56px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.arrow-icon {
+    color: black;
+    margin-right: 6px;
+}
+
+.return-link p {
+    color: black;
+}
+
+.homedetails {
+    padding: 16px 56px 72px 56px;
+    display: flex;
+    gap: 0 40px;
+}
+
+.homedetails-description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Main box of info of the property */
+.home-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-home-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #CED3D8;
+    border-radius: 24px;
+}
+
+.main-home-info h2 {
+    width: 100%;
+    text-align: center;
+    padding: 40px 96px;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.home-details {
+    padding: 24px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    border-top: 1px solid #CED3D8;
+}
+
+.home-detail-title {
+    margin-bottom: 32px;
+    width: 30%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-detail-title :nth-child(1) {
+    margin-bottom: 16px;
+}
+
+.home-detail {
+    color: #3A5295;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.bed-detail {
+    color: #3A5295;
+    font-size: 40px;
+    font-weight: 700;
+}
+.bath-detail {
+    color: #3A5295;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.price-detail {
+    color: #3A5295;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+.bedrooms {
+    display: flex;
+    align-items: center;
+}
+
+.bed-icon {
+    height: 100%;
+    color: #3A5295;
+    font-size: 24px;
+    margin-right: 4px;
+    align-self: flex-start;
+}
+
+
+.bathrooms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bath-icon {
+    height: 100%;
+    color: #3A5295;
+    font-size: 24px;
+    margin-right: 4px;
+    align-self: flex-start;
+}
+
+/* Buttons Styling */
+.btns-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shortlist-btn {
+    width: 48%;
+    height: 48px;
+    border: 1px solid #CED3D8;
+    border-radius: 12px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.shortlist-icon {
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+.booking-btn {
+    width: 48%;
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #3A5295;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+

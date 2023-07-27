@@ -9,5 +9,19 @@
 .allproperties-section h3 {
     font-size: 36px;
     font-weight: 500;
-    margin: 40px;
+    margin-left: 72px;
+}
+
+.allproperties-container {
+    padding: 40px 56px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 56px;
+}
+
+
+/* Life in the current city info */
+.city-info-section {
+    padding: 64px 56px 72px 56px;
 }

@@ -112,6 +112,7 @@
 
 /* Compare Section Styling */
 .compare-section {
+    width: 96%;
     margin: 0 2%;
     padding: 40px 24px;
     display: flex;
@@ -160,17 +161,17 @@
 
 /* Extra Info Styling */
 .extra-info-section {
-    padding: 64px 64px 0 64px;
+    padding: 0 64px 0 64px;
     display: flex;
     justify-content: space-between;
 }
 
 .extra-info-container {
-    margin-top: 40px;
     width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .extra-info {

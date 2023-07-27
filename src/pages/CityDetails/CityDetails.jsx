@@ -4,10 +4,12 @@ import './CityDetails.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import PropertyCard from '../../components/PropertyCard/PropertyCard';
+import CityInfoCard from '../../components/CityInfoCard/CityInfoCard'
 
 function CityDetails() {
   const {cityId} = useParams()
   const [properties, setProperties] = useState([])
+  const [cityInfo, setCityInfo] = useState([])
 
   useEffect(
     () => {
@@ -16,7 +18,17 @@ function CityDetails() {
         setProperties(res.data.response)
       })
       .catch(err => console.log(err))
-    }, []
+    }
+  )
+
+  useEffect(
+    () => {
+      axios.get(`https://unilife-server.herokuapp.com/cities/${cityId}`)
+      .then(res => {
+        setCityInfo(res.data.data);
+      })
+      .catch(err => console.log(err))
+    }
   )
 
   return (
@@ -33,6 +45,11 @@ function CityDetails() {
             properties.map(item => <PropertyCard key={item._id} property={item} />)
           }
         </div>
+      </section>
+      <section className='city-info-section'>
+        {
+          cityInfo.map(item => <CityInfoCard key={item._id} cityInfo={item}/>)
+        }
       </section>
     </div>
   )
