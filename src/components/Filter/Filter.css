@@ -28,4 +28,9 @@
     height: 48px;
     border: 1px solid #CED3D8;
     border-radius: 12px;
+    font-size: 20px;
+}
+
+option {
+    text-align: center;
 }

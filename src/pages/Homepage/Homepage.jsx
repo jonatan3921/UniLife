@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Search from '../../components/Search/Search'
 import './Homepage.css'
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import CityCard from '../../components/CityCard/CityCard';
 import {TbWorldSearch} from 'react-icons/tb'
@@ -13,8 +12,9 @@ import personImg from '../../assets/person.png'
 import { Link } from 'react-router-dom';
 
 function Homepage() {
-  const navigate = useNavigate();
   const [cities, setCities] = useState([])
+  const [query, setQuery] = useState('');
+  const [resultHomes, setResultHomes] = useState([]);
 
   useEffect(
     () => {
@@ -26,7 +26,21 @@ function Homepage() {
     }, []
   )
 
+ 
+  const searchCity = () => {
+    const homes = cities.find(element => element.name.toLowerCase() == query.toLowerCase())
+    axios.get(`https://unilife-server.herokuapp.com/properties/city/${homes._id}`)
+    .then(res => {
+      setResultHomes(res.data.response)
+    })
+    .catch(err => console.log(err))
+    
+  }
 
+
+  const getUserQuery = (e) => {
+    setQuery(e.target.value)
+  }
   
   return (
     <div className='homepage-container'>
@@ -36,9 +50,18 @@ function Homepage() {
             <div className='search-container'>
               <input 
               className='search-input'
-              placeholder='Search by city'/>
-              
-              <button className='findHomes-btn'>Find Homes</button>
+              placeholder='Search by city'
+              onChange={getUserQuery}/>
+              {
+                query.trim() && (
+                  <div className='search-results-container'>
+                    {resultHomes.map(result => (
+                      <Search key={result?._id} home={result} setQuery={setQuery}/>
+                    ))}
+                  </div>
+                )
+              }
+              <button className='findHomes-btn' onClick={searchCity}>Find Homes</button>
             </div>
         </div>
         <section className='cities-section'>
@@ -88,7 +111,7 @@ function Homepage() {
                 <p>Shortlist your favourite properties and send enquiries in one click.</p>
               </div>
             </div>
-            <button>Search & Compare</button>
+            <Link to={'/allcities'} className="search-and-compare">Search & Compare</Link>
           </div>
           <aside>
             <img src={personImg} alt='person'/>

@@ -38,7 +38,7 @@ function CityDetails() {
       <div className='cover-container'>
         <h1>Search Accomodation</h1>
         <p>Whatever you're after, we can help you find the right student accommodation for you. </p>
-        <Filter />
+        <Filter key={properties._id} properties={properties}/>
       </div>
       <section className='allproperties-section'>
         <h3>6 homes in {cityInfo[0]?.name}</h3>

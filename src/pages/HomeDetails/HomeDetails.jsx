@@ -3,7 +3,7 @@ import './HomeDetails.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import {AiOutlineLeft} from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 import HomeImages from '../../components/HomeImages/HomeImages';
 import {MdOutlineBed} from 'react-icons/md'
 import {MdOutlineBathtub} from 'react-icons/md'
@@ -14,6 +14,7 @@ import {AiOutlineCheck} from 'react-icons/ai'
 function HomeDetails() {
     const {homeId} = useParams()
     const [home, setHome] = useState([])
+    const navigate = useNavigate();
 
      
 
@@ -22,12 +23,14 @@ function HomeDetails() {
             axios.get(`https://unilife-server.herokuapp.com/properties/${homeId}`)
             .then(res => {
                 setHome(res.data)
-                console.log(home)
             })
             .catch(err => console.log(err))
         }, []
     )
 
+    const goBack = () => {
+        navigate(-1)
+    }
 
 
     const fullAddress = home?.address?.street + ", " + home?.address?.city + ", " + home?.address?.postcode;
@@ -41,10 +44,10 @@ function HomeDetails() {
      
   return (
     <div className='homedetails-container'>
-        <Link to={'/'} className='return-link'>
+        <button onClick={goBack} className='return-link'>
             <AiOutlineLeft className='arrow-icon'/>
             <p>Back to Search</p>
-        </Link>
+        </button>
         <div className='homedetails'>
             <div className='homedetails-description'>
                 <div className='home-images'>

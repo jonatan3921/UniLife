@@ -1,20 +1,16 @@
 import React from 'react'
 import './Search.css'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
-function Search({city, setQuery}) {
-  const navigate = useNavigate();
-
-  const handleNavigation = () => {
-    setQuery('')
-    navigate(`/citydetails/${city.id}`)
-  }
+function Search({home, setQuery}) {
 
   return (
-    <div className='search-results-item' onClick={handleNavigation}>
-        <p>{city.name}</p>
-    </div>
+    <Link className='search-results-item' to={`/homedetails/${home?._id}`} onClick={() => setQuery('')}>
+        <img src={home?.images[0]} alt="city-img" />
+        <p>{home?.address?.street}, {home?.address?.city}, {home?.address?.postcode}</p>
+        <p>£{home?.rent}</p>
+    </Link>
   )
 }
 
