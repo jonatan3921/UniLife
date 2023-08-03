@@ -33,22 +33,41 @@ function CityDetails() {
   )
 
   const filterProperties = (bedroom, bathroom, price, propertyType) => {
-    const query = {
-      city_id: cityId,
-      bedroom_count: bedroom,
-      bathroom_count: bathroom,
-      rent: price,
-      property_type: propertyType
-    }
-    axios.post(`https://unilife-server.herokuapp.com/properties/filter`, {query})
-    .then(res => {
-      console.log(res.data.response)
-      setProperties(res.data.response)
-    })
-    .catch(err => console.log(err))
+    let query;
+    if (propertyType === 'any'){
+      query = {
+        city_id: cityId,
+        bedroom_count: bedroom,
+        bathroom_count: bathroom,
+        rent: price,
+      }
+    } else {
+        query = {
+          city_id: cityId,
+          bedroom_count: bedroom,
+          bathroom_count: bathroom,
+          rent: price,
+          property_type: propertyType
+        }
+      }
+    
+    //  query = {
+    //   city_id: cityId,
+    //   bedroom_count: bedroom,
+    //   bathroom_count: bathroom,
+    //   rent: price,
+    //   property_type: propertyType
+    // }
+
+      axios.post(`https://unilife-server.herokuapp.com/properties/filter`, {query})
+      .then(res => {
+        setProperties(res.data.response)
+      })
+      .catch(err => console.log(err))
+    
   }
 
-  // console.log(properties)
+
 
   return (
     <div className='citydetails-container'>
