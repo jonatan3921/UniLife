@@ -1,78 +1,75 @@
 import React, {useState, useEffect} from 'react'
 import './Filter.css'
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 
-function Filter({properties}) {
-  const [bathroom, setBathroom] = useState(0);
+function Filter({filterProperties}) {
+  const bedroomOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  const bathroomOptions = [1, 2, 3]
+  const priceOptions = [1000, 1500, 2000, 2500, 3000]
+  const propertyTypeOptions = ['Any', 'Apartment', 'Detached', 'Semi-Detached']
 
+  const [selectedBedrooms, setSelectedBedrooms] = useState(0)
+  const [selectedBathrooms, setSelectedBathrooms] = useState(0)
+  const [selectedPrice, setSelectedPrice] = useState(0)
+  const [selectedType, setSelectedType] = useState('')
 
-   
+  const handleOptions = (e) => {
+    e.preventDefault()
 
-
-  const bathroomCount = [];
-  const bedroomCount = [];
-  const prices = [];
-  const homeType = [];
-
-  for (let i = 0; i < properties?.length; i++) {
-    bathroomCount.push(properties[i]?.bathroom_count)
-    bedroomCount.push(properties[i]?.bedroom_count)
-    prices.push(properties[i]?.rent)
-    homeType.push(properties[i]?.property_type)
+    filterProperties(selectedBedrooms, selectedBathrooms, selectedPrice, selectedType)
   }
-
-  const bathroomOptions = [...new Set(bathroomCount)]
-  const bedroomOptions = [...new Set(bedroomCount)]
-  const pricesOptions = [...new Set(prices)]
-  const homeTypeOptions = [...new Set(homeType)]
-  bathroomOptions.sort((a, b) => a - b);
-  bedroomOptions.sort((a, b) => a - b);
-  pricesOptions.sort((a, b) => a - b);
-  console.log(bathroomOptions);
-  console.log(bedroomOptions);
-  console.log(pricesOptions);
-  console.log(homeTypeOptions);
   
-
-
   
-
+  
   return (
-    <div className='filter-container'>
+    <form className='filter-container' >
         <div className="filter-option">
-            <label for="min-bedroom">Min Bedroom</label>
-            <select name="min-bedroom">
-              <option>Any</option>
+            <label htmlFor="min-bedroom">Min Bedroom</label>
+            <select name="min-bedroom" onChange={(e) => {setSelectedBedrooms(e.target.value)}}>
               {
-                bedroomOptions.map(element => <option>{element}</option>)
+                bedroomOptions.map(item => {
+                  return <option value={item} key={item}>{item}</option>
+                })
               }
             </select>
         </div>
+
         <div className="filter-option">
-            <label for="min-bathroom">Min Bathroom</label>
-            <select name="min-bathroom">
-              <option>Any</option>
+            <label htmlFor="min-bathroom">Min Bathroom</label>
+            <select name="min-bathroom" onChange={(e) => {setSelectedBathrooms(e.target.value)}}>
               {
-                bathroomOptions.map(element => <option>{element}</option>)
+                bathroomOptions.map(item => {
+                  return <option value={item} key={item}>{item}</option>
+                })
               }
-            </select></div>
+            </select>
+        </div>
+
         <div className="filter-option">
-            <label for="max-price">Max Price</label>
-            <select name="max-price">
-              <option>Any</option>
+            <label htmlFor="max-price">Max Price</label>
+            <select name="max-price" onChange={(e) => {setSelectedPrice(e.target.value)}}>
+              <option value={5000}>5000</option>
               {
-                pricesOptions.map(element => <option>{element}</option>)
+                priceOptions.map(item => {
+                  return <option value={item} key={item}>{item}</option>
+                })
               }
-            </select></div>
+            </select>
+        </div>
+
         <div className="filter-option">
-            <label for="home-type">Home Type</label>
-            <select name="home-type">
-              <option>Any</option>
+            <label htmlFor="home-type">Home Type</label>
+            <select name="home-type" onChange={(e) => {setSelectedType(e.target.value)}}>
               {
-                homeTypeOptions.map(element => <option>{element}</option>)
+                propertyTypeOptions.map(element => <option value={element} key={element}>{element}</option>)
               }
-            </select></div>
-    </div>
+            </select>
+        </div>
+        <button onClick={handleOptions}>Submit</button>
+    </form>
   )
 }
 

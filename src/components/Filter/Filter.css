@@ -1,5 +1,5 @@
 .filter-container {
-    width: 85%;
+    width: 88%;
     padding: 32px 24px 24px 24px;
     border-radius: 24px;
     background-color: white;
@@ -33,4 +33,16 @@
 
 option {
     text-align: center;
+}
+
+.filter-container button {
+    width: 15%;
+    height: 48px;
+    align-self: flex-end;
+    font-size: 20px;
+    color: white;
+    background-color: #3A5295;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
 }
