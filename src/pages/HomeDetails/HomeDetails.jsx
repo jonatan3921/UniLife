@@ -10,10 +10,33 @@ import {MdOutlineBathtub} from 'react-icons/md'
 import {AiOutlineHeart} from 'react-icons/ai'
 import BedroomPrices from '../../components/BedroomPrices/BedroomPrices'
 import {AiOutlineCheck} from 'react-icons/ai'
+import Modal from 'react-modal'
+import {MdOutlineAddHomeWork} from 'react-icons/md'
+
+
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      width: '60%',
+      borderRadius: '12px'
+    },
+    overlay: {
+      backgroundColor: "rgba(0, 0, 0, 0.4)"
+    }
+};
+
+Modal.setAppElement(document.getElementById('root'));
+
 
 function HomeDetails() {
     const {homeId} = useParams()
     const [home, setHome] = useState([])
+    const [isOpen, setIsOpen] = useState(false)
     const navigate = useNavigate();
 
      
@@ -111,7 +134,34 @@ function HomeDetails() {
                         <AiOutlineHeart className='shortlist-icon'/>
                         Shortlist
                     </button>
-                    <button className='booking-btn'>Book Viewing</button>
+                    <button className='booking-btn' onClick={() => setIsOpen(true)}>Book Viewing</button>
+                    <Modal
+                    isOpen={isOpen}
+                    onRequestClose={() => setIsOpen(false)}
+                    style={customStyles}
+                    contentLabel="Contact Us Modal"
+                    >
+                    <div className='modal-header'>
+                    <h2>Book a Viewing</h2>
+                    <MdOutlineAddHomeWork className='house-icon'/>
+                    </div>
+                    <p className='address-booking'>{fullAddress}</p>
+                    <form className='modal-form'>
+                    <div>
+                        <label htmlFor="name">Name</label>
+                        <input type="text" id="name" placeholder='Enter your name'/>
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" placeholder='Enter your email address'/>
+                        <label htmlFor='phoneNumber'>Phone Number</label>
+                        <input type='number' id='phoneNumber' placeholder='Enter your phone number'/>
+                    </div>
+                    <div>
+                        <label htmlFor="message">Message</label>
+                        <textarea id="message" rows="4" placeholder='Enter your message'></textarea>
+                        <button type="submit">Submit</button>
+                    </div>
+                    </form>
+                </Modal>
                 </div>
                 <div className='bedrooms-prices-container'>
                     <h2>Bedroom Prices</h2>

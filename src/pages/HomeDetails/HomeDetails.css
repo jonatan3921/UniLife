@@ -228,3 +228,94 @@
     margin-bottom: 24px;
 }
 
+/* Modal Booking Styling */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.modal-header h1 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.house-icon {
+    font-size: 40px;
+    color: #3A5295;
+}
+
+.address-booking {
+    width: 35%;
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+
+.modal-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-form :nth-child(1) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form :nth-child(1) label {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.modal-form :nth-child(1) input {
+    width: 90%;
+    height: 56px;
+    padding: 8px;
+    font-size: 20px;
+    border: 1px solid #CED3D8;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+.modal-form :nth-child(1) input::placeholder {
+    color: #CED3D8;
+    font-size: 20px;
+}
+
+.modal-form :nth-child(2) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-form :nth-child(2) label {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.modal-form :nth-child(2) textarea {
+    width: 100%;
+    height: 184px;
+    padding: 8px;
+    border: 1px solid #CED3D8;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.modal-form :nth-child(2) textarea::placeholder {
+    color: #CED3D8;
+    font-size: 20px;
+}
+
+.modal-form :nth-child(2) button {
+    height: 56px;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: #3A5295;
+    cursor: pointer;
+}
