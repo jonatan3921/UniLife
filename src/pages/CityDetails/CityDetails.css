@@ -25,3 +25,19 @@
 .city-info-section {
     padding: 64px 56px 72px 56px;
 }
+
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .allproperties-section {
+        margin-top: 176px;
+    }
+
+    .allproperties-section h3 {
+        margin-left: 32px;
+    }
+
+    .allproperties-container {
+        padding: 40px 24px;
+        gap: 24px;
+    }
+}

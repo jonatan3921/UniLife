@@ -10,7 +10,6 @@ function AllCities() {
         () => {
           axios.get(`https://unilife-server.herokuapp.com/cities`)
           .then(res => {
-            console.log(res.data.response)
             setCities(res.data.response);
           })
           .catch(err => console.log(err))
@@ -28,7 +27,7 @@ function AllCities() {
             <h3>Search by city</h3>
             <div className='city-container'>
                 {
-                cities.map(item => <Link to={`/citydetails/${item?._id}`} className='city'>{item?.name}</Link>)
+                cities.map(item => <Link to={`/citydetails/${item?._id}`} key={item?._id} className='city'>{item?.name}</Link>)
                 }
             </div>
         </section>

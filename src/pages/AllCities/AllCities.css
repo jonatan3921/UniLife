@@ -42,3 +42,19 @@
     border: 1px solid #CED3D8;
     border-radius: 24px;
 }
+
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .cover-container p {
+        width: 80%;
+    }
+    .allcities-section h3 {
+        font-size: 36px;
+    }
+    .city-container {
+        margin-bottom: 24px;
+    }
+    .city {
+        width: 48%;
+    }
+}

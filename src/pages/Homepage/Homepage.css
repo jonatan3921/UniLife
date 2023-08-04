@@ -237,3 +237,61 @@
     justify-content: flex-end;
     align-items: flex-end;
 }
+
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .cover-container h1 {
+        font-size: 40px;
+    }
+
+    .cover-container p {
+        font-size: 20px;
+    }
+
+    .search-container {
+        width: 90%;
+        padding: 24px 32px;
+    }
+
+    .findHomes-btn {
+        width: 35%;
+    }
+
+    .cities-container {
+        padding: 48px 32px 0 32px;
+    }
+
+    .compare-section {
+        margin-bottom: 32px;
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .info p {
+        width: 60%;
+    }
+
+    .extra-info {
+        display: none;
+    }
+
+    .extra-info-section aside {
+        display: none;
+    }
+
+    .extra-info-container {
+        width: 100%;
+        align-items: center;
+    }
+
+    .search-and-compare {
+        margin-bottom: 32px;
+    }
+}

@@ -66,3 +66,17 @@
     color: white;
     text-decoration: none;
 }
+
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .contact-container{
+        padding: 24px 40px;
+    }
+    .email-container {
+        width: 60%;
+        margin-right: 15%;
+    }
+    .social-media-container {
+        width: 50%;
+    }
+}

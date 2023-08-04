@@ -38,3 +38,11 @@
     color: white;
 }
 
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .city-card {
+        width: 48%;
+        height: 250px;
+        margin-bottom: 24px;
+    }
+}

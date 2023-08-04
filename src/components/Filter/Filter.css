@@ -47,3 +47,22 @@ option {
     border-radius: 12px;
     cursor: pointer;
 }
+
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .filter-container {
+        width: 95%;
+        flex-wrap: wrap;
+        bottom: -150px;
+    }
+    .filter-container label {
+        display: none;
+    }
+    .filter-option {
+        width: 48%;
+        margin-bottom: 24px;
+    }
+    .filter-container button {
+        width: 48%;
+    }
+}

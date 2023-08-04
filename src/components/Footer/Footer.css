@@ -39,3 +39,18 @@
 .other-info :nth-child(1) {
     margin-right: 16px;
 }
+
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .main-links {
+        flex-direction: column;
+    }
+
+    .main-links :nth-child(1) {
+        margin-bottom: 8px;
+    }
+
+    .main-links :nth-child(2) {
+        margin-bottom: 8px;
+    }
+}
