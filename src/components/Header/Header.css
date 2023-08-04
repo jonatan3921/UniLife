@@ -70,9 +70,134 @@
 }
 
 .contactus-container :nth-child(2) {
-    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .contactus-container :nth-child(2) p {
     font-size: 16px;
+}
+
+/* Modal Contact Us Styling */
+.modal-header-contactus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.mail-icon {
+    font-size: 32px;
+    color: #3A5295;
+}
+
+.contactus-text {
+    width: 55%;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.modal-form-contactus {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-form-contactus :nth-child(1) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-contactus :nth-child(1) label {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.modal-form-contactus :nth-child(1) input {
+    width: 95%;
+    height: 56px;
+    padding: 12px;
+    font-size: 20px;
+    border: 1px solid #CED3D8;
+    border-radius: 12px;
+    color: black;
+    margin-bottom: 12px;
+}
+
+.modal-form-contactus :nth-child(1) input::placeholder {
+    color: #CED3D8;
+}
+
+.modal-form-contactus :nth-child(1) select {
+    width: 95%;
+    height: 56px;
+    padding: 12px;
+    font-size: 20px;
+    color: #CED3D8;
+    border: 1px solid #CED3D8;
+    border-radius: 12px;
+}
+
+.modal-form-contactus :nth-child(1) option {
+    text-align: left;
+}
+
+
+.modal-form-contactus :nth-child(2) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-contactus :nth-child(2) label {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.modal-form-contactus :nth-child(2) input {
+    width: 100%;
+    height: 56px;
+    padding: 12px;
+    font-size: 20px;
+    border: 1px solid #CED3D8;
+    border-radius: 12px;
+    color: black;
+    margin-bottom: 12px;
+}
+
+.modal-form-contactus :nth-child(2) input::placeholder {
+    color: #CED3D8;
+}
+
+.modal-form-contactus :nth-child(2) textarea {
+    width: 100%;
+    height: 184px;
+    padding: 8px;
+    border: 1px solid #CED3D8;
+    border-radius: 12px;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.modal-form-contactus :nth-child(2) textarea::placeholder {
+    color: #CED3D8;
+}
+
+.modal-form-contactus :nth-child(2) button {
+    width: 100%;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: #3A5295;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
 }
