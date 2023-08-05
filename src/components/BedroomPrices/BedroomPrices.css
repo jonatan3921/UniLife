@@ -1,5 +1,4 @@
 .bedroomsPrices-container {
-    
     border: 1px solid #CED3D8;
     border-radius: 24px;
 }
@@ -22,4 +21,11 @@
 
 .bedroomPrice {
     font-size: 20px;
+}
+
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .bedroomsPrices-container {
+        width: 100%;
+    }
 }

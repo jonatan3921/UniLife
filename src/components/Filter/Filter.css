@@ -66,3 +66,18 @@ option {
         width: 48%;
     }
 }
+
+/* Media Query for Phone */
+@media screen and (max-width: 720px) {
+    .filter-container {
+        bottom: -300px;
+    }
+
+    .filter-option {
+        width: 100%;
+    }
+
+    .filter-container button {
+        width: 100%;
+    }
+}

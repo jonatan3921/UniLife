@@ -58,3 +58,11 @@
         width: 48%;
     }
 }
+
+/* Media Query for Phone */
+@media screen and (max-width: 720px) {
+    .city {
+        width: 100%;
+        height: 80px;
+    }
+}

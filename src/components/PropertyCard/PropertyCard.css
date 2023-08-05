@@ -100,3 +100,11 @@
         width: 47%;
     }
 }
+
+/* Media Query for Phone */
+@media screen and (max-width: 720px) {
+    .property-card-container {
+        width: 100%;
+
+    }
+}

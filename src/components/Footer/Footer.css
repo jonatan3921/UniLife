@@ -54,3 +54,14 @@
         margin-bottom: 8px;
     }
 }
+
+/* Media Query for Phone */
+@media screen and (max-width: 720px) {
+    .main-links {
+        width: 60%;
+    }
+
+    .other-info {
+        align-self: flex-end;
+    }
+}

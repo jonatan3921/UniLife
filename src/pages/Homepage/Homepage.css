@@ -295,3 +295,34 @@
         margin-bottom: 32px;
     }
 }
+
+/* Media Query for Phone */
+@media screen and (max-width: 720px) {
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 48px;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .findHomes-btn {
+        width: 60%;
+        height: 48px;
+    }
+
+    .search-results-container {
+        top: 120px;
+    }
+
+    .cities-container {
+        padding: 48px 48px 0 48px;
+    }
+
+    .search-and-compare {
+        width: 60%;
+    }
+}

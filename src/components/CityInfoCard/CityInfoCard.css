@@ -56,3 +56,10 @@ aside img {
     }
 
 }
+
+/* Media Query for Phone */
+@media screen and (max-width: 720px) {
+    .city-info-container {
+        margin-top: 0;
+    }
+}

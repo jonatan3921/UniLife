@@ -15,7 +15,7 @@ function HomeImages({home}) {
 
 
   return (
-    <div>
+    <div className='images-container'>
         <img className='main-image' src={image1} alt='home'/>
         <div className='extra-images-container'>
             <img src={image2} alt="home" className="extra-images" />

@@ -1,3 +1,7 @@
+.images-container {
+    width: 48.5%;
+}
+
 .main-image {
     width: 100%;
     border-radius: 24px;
@@ -12,4 +16,12 @@
 .extra-images {
     width: 32%;
     border-radius: 12px;
+}
+
+
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .images-container {
+        width: 100%;
+    }
 }

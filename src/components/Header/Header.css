@@ -201,3 +201,48 @@
     border-radius: 12px;
     cursor: pointer;
 }
+
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .modal-header-contactus {
+        margin-bottom: 12px;
+    }
+
+    .contactus-text {
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .modal-form-contactus {
+        flex-direction: column;
+    }
+
+    .modal-form-contactus :nth-child(1) {
+        width: 100%;
+    }
+
+    .modal-form-contactus :nth-child(1) input {
+        width: 100%;
+    }
+
+    .modal-form-contactus :nth-child(1) select {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .modal-form-contactus :nth-child(2) {
+        width: 100%;
+    }
+
+    .modal-form-contactus :nth-child(2) textarea {
+        height: 120px;
+    }
+}
+
+/* Media Query for Phone */
+@media screen and (max-width: 720px) {
+    .mail-icon {
+        display: none;
+    }
+}

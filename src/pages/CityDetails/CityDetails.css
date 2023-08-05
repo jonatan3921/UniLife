@@ -41,3 +41,15 @@
         gap: 24px;
     }
 }
+
+/* Media Query for Phone */
+@media screen and (max-width: 720px) {
+    .allproperties-section {
+        margin-top: 350px;
+    }
+
+    .city-info-section {
+        padding: 0 24px;
+        margin-bottom: 32px;
+    }
+}

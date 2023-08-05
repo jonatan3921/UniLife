@@ -27,54 +27,17 @@
 .homedetails {
     padding: 16px 56px 72px 56px;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 0 40px;
 }
 
-/* Side of the Main description of the property */
-.homedetails-description {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+
+/* Home Specifications */
+.home-booking-info {
+    width: 48.5%;
 }
 
-.description-container {
-    margin-top: 72px;
-}
-
-.description-container h2 {
-    font-size: 36px;
-    font-weight: 500;
-    margin-bottom: 24px;
-}
-
-.description-container p {
-    font-size: 20px;
-}
-
-.key-features-container {
-    margin-top: 72px;
-}
-
-.key-features-container h2 {
-    font-size: 36px;
-    font-weight: 500;
-    margin-bottom: 24px;
-}
-
-.key-features-container p {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    margin-bottom: 24px;
-}
-
-.check-icon {
-    color: #3A5295;
-    margin-right: 8px;
-}
-
-
-/* Main box of info of the property */
 .home-info {
     width: 50%;
     display: flex;
@@ -113,15 +76,11 @@
 .home-detail-title {
     margin-bottom: 32px;
     width: 30%;
-    height: 40%;
+    height: 104px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-.home-detail-title :nth-child(1) {
-    margin-bottom: 16px;
 }
 
 .home-detail {
@@ -159,7 +118,6 @@
     color: #3A5295;
     font-size: 24px;
     margin-right: 4px;
-    align-self: flex-start;
 }
 
 
@@ -174,7 +132,6 @@
     color: #3A5295;
     font-size: 24px;
     margin-right: 4px;
-    align-self: flex-start;
 }
 
 /* Buttons Styling */
@@ -217,16 +174,6 @@
     cursor: pointer;
 }
 
-/* Bedroom Prices box */
-.bedrooms-prices-container {
-    margin-top: 72px;
-}
-
-.bedrooms-prices-container h2 {
-    font-size: 36px;
-    font-weight: 500;
-    margin-bottom: 24px;
-}
 
 /* Modal Booking Styling */
 .modal-header {
@@ -319,3 +266,210 @@
     background-color: #3A5295;
     cursor: pointer;
 }
+
+
+/* Description and Features Container */
+.description-and-features {
+    width: 48.5%;
+}
+
+/* Description of the Property */
+.description-container {
+    width: 90%;
+    height: fit-content;
+    margin-top: 80px;
+}
+
+.description-container h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.description-container p {
+    font-size: 20px;
+}
+
+
+/* Key Features of the Property */
+.key-features-container {
+    width: 90%;
+    margin-top: 88px;
+}
+
+.key-features-container h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.key-features-container p {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.check-icon {
+    color: #3A5295;
+    margin-right: 8px;
+}
+
+
+
+/* Bedroom Prices box */
+.bedrooms-prices-container {
+    width: 48.5%;
+    margin-top: 72px;
+}
+
+.bedrooms-prices-container h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+
+
+/* Media Query for tablet */
+@media screen and (max-width: 1024px) {
+    .return-link {
+        margin: 72px 0 0 32px;
+    }
+
+    .homedetails {
+        padding: 16px 32px 72px 32px;
+    }
+
+    .home-booking-info {
+        width: 100%;
+        margin-top: 32px;
+    }
+
+    .description-and-features {
+        width: 100%;
+    }
+    
+    .description-container {
+        width: 85%;
+    }
+
+    .key-features-container {
+        margin-top: 32px;
+    }
+
+    .bedrooms-prices-container {
+        margin-top: 24px;
+        width: 100%;
+    }
+
+    .modal-header {
+        margin-bottom: 16px;
+    }
+
+    .address-booking {
+        width: 75%;
+        margin-bottom: 16px;
+    }
+
+    .modal-form {
+        flex-direction: column;
+    }
+
+    .modal-form :nth-child(1) {
+        width: 100%;
+    }
+
+    .modal-form :nth-child(1) input {
+        width: 100%;
+    }
+
+    .modal-form :nth-child(2) {
+        width: 100%;
+    }
+
+    .modal-form :nth-child(2) textarea {
+        width: 100%;
+        height: 160px;
+        margin-bottom: 16px;
+    }
+}
+
+/* Media Query for Phone */
+@media screen and (max-width: 720px) {
+    .home-booking-info {
+        border: 1px solid #CED3D8;
+        border-radius: 24px;
+    }
+
+    .main-home-info {
+        border: none;
+    }
+
+    .main-home-info h2 {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .home-details {
+        padding: 24px 0;
+    }
+
+    .bedrooms {
+        margin-bottom: 8px;
+    }
+
+    .bed-detail {
+        font-size: 20px;
+    }
+
+    .bathrooms {
+        margin-bottom: 8px;
+    }
+
+    .bath-detail {
+        font-size: 20px;
+    }
+
+    .price-detail {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .home-detail {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .btns-container {
+        margin-top: 0;
+        flex-direction: column;
+    }
+
+    .shortlist-btn {
+        margin-bottom: 12px;
+        width: 60%;
+    }
+
+    .booking-btn {
+        margin-bottom: 12px;
+        width: 60%;
+    }
+
+    .house-icon {
+        display: none;
+    }
+
+    .modal-form :nth-child(2) label {
+        margin-bottom: 8px;
+    }
+
+    .description-container {
+        width: 100%;
+    }
+}
+
+
+
+
+

@@ -80,3 +80,32 @@
         width: 50%;
     }
 }
+
+/* Media Query for Phone */
+@media screen and (max-width: 720px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 24px 56px;
+    }
+
+    .email-container {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    
+    .email-container input {
+        width: 100%;
+    }
+
+    .social-media-container {
+        width: 100%;
+    }
+
+    .social-media-container h3 {
+        margin-bottom: 12px;
+    }
+
+    .social {
+        margin-bottom: 12px;
+    }
+}
