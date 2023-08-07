@@ -58,7 +58,7 @@ aside img {
 }
 
 /* Media Query for Phone */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 560px) {
     .city-info-container {
         margin-top: 0;
     }

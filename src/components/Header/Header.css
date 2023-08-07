@@ -2,6 +2,7 @@
     padding: 8px 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #00A2E1;
 }
 
@@ -31,6 +32,19 @@
 /* Other Links Styling */
 .other-links {
     display: flex;
+}
+
+nav {
+    display: flex;
+}
+
+/* Hamburger Menu Styling */
+.burger {
+    display: none;
+}
+
+#check {
+    display: none;
 }
 
 /* Shortlist Styling */
@@ -241,8 +255,34 @@
 }
 
 /* Media Query for Phone */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 560px) {
     .mail-icon {
         display: none;
+    }
+
+    .other-links-actived {
+        width: 100%;
+    }
+
+    .no-show {
+        display: none;
+    }
+
+
+    .show-menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .burger { 
+        display: block;
+        font-size: 32px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .contactus-container {
+        margin-left: 24px;
     }
 }

@@ -396,7 +396,7 @@
 }
 
 /* Media Query for Phone */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 560px) {
     .home-booking-info {
         border: 1px solid #CED3D8;
         border-radius: 24px;

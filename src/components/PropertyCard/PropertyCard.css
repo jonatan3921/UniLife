@@ -102,7 +102,7 @@
 }
 
 /* Media Query for Phone */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 560px) {
     .property-card-container {
         width: 100%;
 

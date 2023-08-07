@@ -43,7 +43,7 @@
 }
 
 /* Media Query for Phone */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 560px) {
     .allproperties-section {
         margin-top: 350px;
     }

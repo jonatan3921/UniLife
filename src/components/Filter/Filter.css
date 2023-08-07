@@ -68,7 +68,7 @@ option {
 }
 
 /* Media Query for Phone */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 560px) {
     .filter-container {
         bottom: -300px;
     }

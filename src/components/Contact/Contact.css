@@ -82,7 +82,7 @@
 }
 
 /* Media Query for Phone */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 560px) {
     .contact-container {
         flex-direction: column;
         padding: 24px 56px;
